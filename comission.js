@@ -6,10 +6,10 @@ var calc =document.querySelector("#calc");
 var reset=document.querySelector("#reset");
 var goalcomiss=document.querySelector("#hundredcomission");
 var multiplier =0;
-var comiss=1500;
-var percent= 100;
-var goal=15;
-var count=10;
+var comiss=0;
+var percent= 0;
+var goal=0;
+var count=0;
 
 quota.addEventListener("change", function(){
 	goal.textContent =quota.value;
