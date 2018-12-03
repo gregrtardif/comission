@@ -10,28 +10,36 @@
 </head>
 <body>
     <div class="page">
-    <h1>Fake Comission</h1>
+    <h1>Comission</h1>
+    
 <table>
     <tr>
         <th>Quota</th>
         <th>Sale Count</th>
+        <th>100% Commission</th>
+       
     </tr>
     <tr>
-           <td> <input type="number" id="quota" placeholder="Quota"></td>
-          <td><input type="number" id="saleCount" placeholder="Sales"></td>
+           <td> <input type="number" id="quota" placeholder="Quota" required></td>
+          <td><input type="number" id="saleCount" placeholder="Sales" required></td>
+          <td>  <input type="number" id="hundredcomission" placeholder="100% Pay" required></td>
     </tr>
     <tr>
     <th>Percentage of Goal</th>
+    <th></th>
     <th>Comission</th>
 </tr>
 <tr>
         <td><span id ="percentage">0</span>%</td>
+        <td></td>
         <td>$<span id="comission">0</span></td>
 </tr>
     <tr>
         <td><button id="calc">Calculate</button></td>
+        <td></td>
         <td><button id="reset">Reset</button></td>
     </tr>
+   
 </table>
 
 

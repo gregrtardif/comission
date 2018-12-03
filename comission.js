@@ -4,6 +4,7 @@ var percentage =document.querySelector("#percentage");
 var comission=document.querySelector("#comission");
 var calc =document.querySelector("#calc");
 var reset=document.querySelector("#reset");
+var goalcomiss=document.querySelector("#hundredcomission");
 var multiplier =0;
 var comiss=1500;
 var percent= 100;
@@ -20,18 +21,23 @@ saleCount.addEventListener("change", function(){
 	count=Number(saleCount.value);
 
 });
+goalcomiss.addEventListener("change", function(){
+	comiss.textContent =goalcomiss.value;
+	comiss=Number(goalcomiss.value);
+
+});
 
 calc.addEventListener("click", function(){
     percent=count/goal;
     multiplier=percent-1;
     
     if(multiplier>=0){
-        comiss=((multiplier*2+1)*1500).toFixed(2);   
+        comiss=((multiplier*2+1)*comiss).toFixed(2);   
         comission.textContent=comiss;
         percentage.textContent=(percent*100).toFixed(0); 
      }
     else{
-        comiss=((multiplier+1)*1500).toFixed(2);
+        comiss=((multiplier+1)*comiss).toFixed(2);
         
         comission.textContent=comiss;
         percentage.textContent=(percent*100).toFixed(0);
